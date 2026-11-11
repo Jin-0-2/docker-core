@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1
+
+
+FROM alpine:3.24
+
+WORKDIR /app
+
+COPY hello.txt ./
+
+CMD ["pwd"]
+
+WORKDIR src
+
+COPY hello.txt ./
+
+#----- 
+#WORKDIR /app
+#COPY pet.jar ./
+
+#CMD ["java", "-jar", "pet.jar"]
+
+#----
+#COPY pet.jar /app/
+
+#CMD ["java", "-jar", "/app/pet.jar"]

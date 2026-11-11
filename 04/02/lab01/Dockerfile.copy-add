@@ -1,0 +1,10 @@
+# syntax=docker/dockerfile:1
+
+FROM alpine:3.24
+
+COPY files.tar /app/
+# RUN tar -xvf /app/files.tar 
+ADD files.tar /add/
+
+
+CMD ["ls", "-R", "/copy", "/add"]
